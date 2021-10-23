@@ -8,10 +8,10 @@ class Charlotte(BotPlugin):
     """
 
     @arg_botcmd('ip', type=str)
-    def graynoise(self, _, args):
+    def graynoise(self, _, ip):
         """
         Run Graynoise on the target IP address
         """
-        resp = requests.get(f'https://api.greynoise.io/v3/community/{args.ip}')
+        resp = requests.get(f'https://api.greynoise.io/v3/community/{ip}')
         result = resp.json()
-        return f"{args.ip} is considered as {result['classification']} (result['name'], last seen: result['last_seen']) - result['link']"
+        return f"{ip} is considered as {result['classification']} (result['name'], last seen: result['last_seen']) - result['link']"
