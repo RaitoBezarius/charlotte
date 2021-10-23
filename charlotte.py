@@ -14,4 +14,4 @@ class Charlotte(BotPlugin):
         """
         resp = requests.get(f'https://api.greynoise.io/v3/community/{ip}')
         result = resp.json()
-        return f"{ip} is considered as {result['classification']} (result['name'], last seen: result['last_seen']) - result['link']"
+        return f"{ip} is considered as {result['classification']} ({result['name']}, last seen: {result['last_seen'])} - more: {result['link']}"
