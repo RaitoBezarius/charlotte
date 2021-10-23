@@ -1,0 +1,10 @@
+[Core]
+name = charlotte
+module = charlotte
+
+[Documentation]
+description = Personal bot for many operations
+
+[Python]
+version = 3
+
